@@ -1,6 +1,10 @@
 #!/bin/bash
 # Generates message of the day on Linux systems.
-#
+# What needs to be installed 
+# yum install redhat-lsb-core epel-release -y && yum update -y && yum install figlet -y 
+# Put this file under /etc/cron.daily/
+# Run sudo chmod +x /etc/cron.daily/motd
+# Run sudo echo "02 4 * * * root run-parts /etc/cron.daily" >> /etc/crontab
 # Part 1: Function that detects which OS and if it is Linux then it will detect which Linux Distribution.
 OS=$(uname -s)
 REV=$(uname -r)
